@@ -24,11 +24,14 @@ public class Task5 {
             System.out.print(array[i] + " ");
         }
         System.out.println();
-        for (int j = array.length - 1; j >= array.length / 2; j--) {
-            System.out.print(array[j] + " ");
+        for (int i = 0; i < array.length / 2; i++) {
+            int temp = array[i];
+            array[i] = array[array.length - i - 1];
+            array[array.length - i - 1] = temp;
         }
-        for (int i = (array.length / 2) - 1; i >= 0; i--) {
-            System.out.print(array[i] + " ");
+
+        for(int item : array){
+            System.out.print(item + " ");
         }
     }
 }
